@@ -36,6 +36,10 @@
 - Build the program with, `go`build` (if you make an error, go back and edit `main.go`)
 - Run your program `./whattimeisit`, it should print something like this
 
+```
+ The current time is 2016-12-05 12:33:18.222821474 +0900 JST
+```
+
 ## Writing tests
 
 - The code for this exercise is in `$GOPATH/src/simplestrings/`
