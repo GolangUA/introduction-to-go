@@ -162,18 +162,6 @@ To make a constant, we declare one with the `const` keyword.
 
 .code -edit src/const/const1/main.go /START OMIT/,/END OMIT/
 
-Whenever you see a *Run* button on a slide, you can execute the code.
-
-- Press the *Run* button now and see what happens. 
-- Press the *Close* button to close the output window.
-
-You can also edit the code right here in the slide.
-
-- Edit the code to replace my name, with yours.
-- All source code in Go is UTF-8, you can use Kanji.
-- Press the *Run* button to see the results.
-- If you make a mistake, just reload the page.
-
 * Identifiers
 
 This is a good time to talk about _identifiers_.
@@ -186,9 +174,6 @@ In Go an identifier is any word that starts with a _letter_.
 
 A letter is anything that Unicode defines to be a letter, this includes Kanji, Cyrillic, Latin, etc.
 
-- Identifiers are not restricted to ASCII, edit the slide and change `students` to `Студенти` and press *Run*.
-- If you make a mistake, just reload the page.
-
 * Identifiers (cont.)
 
 An identifier must start with a Unicode letter, or the underscore character, `_`.
@@ -198,10 +183,6 @@ Numbers are not permitted at the start of an identifier, but can appear later in
 .code -edit src/identifier/identifier2/main.go /START OMIT/,/END OMIT/
 
 Here are some examples of _invalid_ identifiers.
-
-- Change the name of the identifier so that the program compiles.
-- Press the *Run* button to see the results.
-- If you make a mistake, just reload the page.
 
 * Comments
 
@@ -213,10 +194,6 @@ Go supports two kinds of comments:
 .code -edit src/comments/comments1/main.go /START OMIT/,/END OMIT/
 
 Code that is commented out will not be compiled or run.
-
-- Remove the comments in this program so it compiles.
-- Press the *Run* button to see the results, it should compile and print `1`2`3`.
-- If you make a mistake, just reload the page.
 
 * Declarations
 
@@ -243,8 +220,6 @@ You _declare_ a new variable with the `var` declaration.
 
 Just like constants, variable _identifiers_ can be any any valid Unicode word.
 
-- Press the *Run* button to see the result.
-
 _note_: The circumference is printed in scientific notation 😕, that's ok, we'll talk about how to fix it later when we talk about the `fmt` package.
 
 * Unused variable declarations
@@ -259,7 +234,6 @@ This program has four unused variables.
 
 - Fix the program by removing the comment from the two lines at the bottom.
 - Delete, or comment out, the declaration of `自転車` as it is unused.
-- Press the *Run* button to check that your program compiles.
 
 * Statements
 
@@ -286,7 +260,7 @@ It is common that you need to change the value stored in a variable, this is cal
 
 In this example, we declare
 
-- Press *Run* to check that program prints, `1`, `2`, `4`.
+- Check that program prints, `1`, `2`, `4`.
 # - Update the program to declare a new variable, `z`, which has a value 2x larger than `y`.
 
 * Assignment (cont.)
@@ -297,9 +271,7 @@ You can only assign a new value to _variables_.
 
 It is a syntax error to assign a new value to a constant.
 
-- Press *Run* and see the program does not compile.
 - Edit the sample code to change the declaration of `x` from a constant (`const`) to a variable (`var`).
-- Press *Run* and check the program compiles and prints the correct answer, 2.
 
 * Increment and decrement
 
@@ -307,9 +279,7 @@ Go supports a limited form of variable post-increment and post-decrement, ie. `x
 
 .code -edit src/increment/increment1/main.go /START OMIT/,/END OMIT/
 
-- Press *Run* and see the program prints `2`,
 - Edit the sample code to subtract `1` from `i` using the decrement operator `i--`.
-- Press *Run* and check the program compiles and prints the correct answer, 0.
 
 * Increment and decrement (cont.)
 
@@ -320,7 +290,6 @@ Go supports a limited form of variable post-increment and post-decrement, ie. `x
 This program has a syntax error. 
 
 - Edit the sample code to correct the error by moving the `i++` statement above the declaration of `var`j`.
-- Press *Run* and check the program compiles and prints the correct answer, 2, 2.
 
 * Looping
 
@@ -349,7 +318,6 @@ Let's practice using loops.
 This program counts from `1` to `10`, can you make it print only the _even_ numbers.
 
 - Edit the program to make it print only the even numbers between `1` and `10`, inclusive.
-- Press *Run* and check the program compiles and prints the correct answer, `2`, `4`, `6`, `8`, `10`.
 
 _note_: you do not need to put `(` braces around the `for` condition `)`. In fact, if you do it's a syntax error. Try it.
 
@@ -362,7 +330,6 @@ Let's practice counting down, this is where you would use a `while` loop in othe
 This program counts down from `10` to `1`, can you make it count from `7` to `3`.
 
 - Edit the program to make it print only the numbers from `7` down to `3`.
-- Press *Run* and check the program compiles and prints the correct answer, `7`, `6`, `5`, `4`, `3`.
 
 _note_: this `for` loop only has a _condition_, there is no _init_statement_ or _post_statement_, so we can omit the semicolons, `;`.
 
@@ -395,7 +362,6 @@ Let's revisit our previous even numbers `for` loop example.
 This program counts from `1` to `10`, can you make it print only the _even_ numbers.
 
 - Uncomment the `if`i%2`==`0`{` and `}` lines to make the program print only the even numbers between `1` and `10`.
-- Press *Run* and check the program compiles and prints the correct answer, `2`, `4`, `6`, `8`, `10`.
 
 _note_: `%` is the _modulo_ operator in Go. All even numbers divide wholly by `2`, leaving `0` as their _modulo_ (or remainder).
 
@@ -410,7 +376,6 @@ We can rewrite the previous program using a new statement, `continue`, which _sk
 .code -edit src/conditionals/conditionals2/main.go /START OMIT/,/END OMIT/
 
 - Uncomment the `if`i%1`==`1`{`, `continue`, and `}` lines.
-- Press *Run* and check the program compiles and prints the correct answer, `2`, `4`, `6`, `8`, `10`.
 
 * break
 
@@ -421,7 +386,6 @@ We can use the `break` statement, which breaks out of the _current_ loop, to fix
 .code -edit src/conditionals/conditionals3/main.go /START OMIT/,/END OMIT/
 
 - Uncomment the `if`i`>`10`{`, `break`, and `}` lines.
-- Press *Run* and check the program compiles and prints the correct answer, `2`, `4`, `6`, `8`, `10`.
 
 * Type inference
 
@@ -478,8 +442,6 @@ String types behave much as you would expect in other languages.
 
 Strings may be _concatenated_ with the `+` operator.
 
-- Press *Run* to see the result.
-
 _note_: In Go an empty string is `""`, not `null` or `nil`.
 
 * Integer types
@@ -510,9 +472,7 @@ Different _sized_ integer types can accommodate different ranges of numbers.
 
 This program contains two type errors.
 
-- Press *Run* to discover the two type errors.
 - Fix the program by changing the declared types of `x` and `y`.
-- Press *Run* and check the program compiles and prints the correct answer, `400`, `-7`
 
 * Functions
 
@@ -536,7 +496,6 @@ A function's name must be a valid identifier, just like `const` and `var`.
 This program declares two functions, `main` and `hello`.
 
 - Uncomment the `println("Здоровеньки були")` statement in `func`hello`.
-- Press *Run* and check the program compiles and prints Здоровеньки були three times.
 
 _note_: `println` is a _built_in_ function provided, you don't need to declare it.
 
@@ -551,7 +510,6 @@ To pass an argument to a function, the type of the argument and the type of the 
 In this program the type of the argument passed to `hello` does not match the type of the `name` parameter.
 
 - Fix the declaration of `hello` so that the type of the parameter matches the type of the argument provided.
-- Press *Run* and check the program compiles and prints `Привіт `David`.
 
 * Packages
 
@@ -573,9 +531,7 @@ This program has the wrong `package` declaration.
 
 .code -edit src/packages/packages2/main.go
 
-- Press *Run* and observe the compile error.
 - Change the `package` declaration to make the program compile.
-- Press *Run* to check that program prints its greeting.
 
 * Import
 
@@ -609,7 +565,6 @@ The `import` declaration must appear _after_ the `package` declaration, but befo
 This program does not compile as the `import` declaration is in the wrong place.
 
 - Move the `var`now`=`time.Now()` declaration _below_ the `import` declaration.
-- Press *Run* to check that program prints the current time.
 
 * Import (cont.)
 
@@ -620,7 +575,6 @@ Packages contain both _public_ and _private_ symbols. We also call these _export
 This program does not compile as it refers to two _private_ symbols.
 
 - Fix the program by using the correct case for `Println` and `Time`.
-- Press *Run* to check that program prints the current time.
 
 _note_: If you are running this slide from [[https://go-talks.golang.org/][gotalks.golang.org]], the time may be reported as `2009-11-10`23:00:00`+0000`UTC`. This is a technical limitation.
 
@@ -633,8 +587,6 @@ Do you remember this program?
 Here it is again, showing the `func`, `package` and `import` declarations making it a complete Go program.
 
 This program also uses the `Println` function from the `fmt` package, which is more capable than the built in `println` function.
-
-- Press *Run* to see how `fmt.Println` prints this output.
 
 * Recap
 
@@ -720,7 +672,6 @@ Trying to compare two variables of _different_ types is detected at runtime.
 
 - Follow [[https://play.golang.org/p/LwiJm2xuXK][this link]] and press the *Run* button.
 - Fix the program by declaring `x` and `y` to be the _same_ type.
-- Press the *Run* button and confirm the program now prints `true`.
 
 * Type conversions
 
@@ -734,7 +685,6 @@ In this example the assignment of `y`=`x` fails because `x` and `y` are differen
 
 - Follow [[https://play.golang.org/p/wvG41C0lH4][this link]] and press the *Run* button.
 - Fix the program by _converting_ `x` to an `int` with `int(x)`.
-- Press the *Run* button and confirm the program now prints `700`.
 
 * Type conversions (cont.)
 
@@ -744,7 +694,6 @@ If you have variables of different _widths_, you can _convert_ from one type to 
 
 - Follow [[https://play.golang.org/p/l4Q48pWAla][this link]] and press the *Run* button.
 - Fix the program by _converting_ `x` to an `int64` with `int64(x)`.
-- Press the *Run* button and confirm the program now prints `32000`.
 
 * Type conversions (cont.)
 
@@ -754,7 +703,6 @@ We can do the opposite and convert a wider type to a narrower type.
 
 - Follow [[https://play.golang.org/p/NbNwRjbmRu][this link]] and press the *Run* button. Does it print the answer you expected?
 - Fix the program by _declaring_ `y` as an `int32`.
-- Press the *Run* button and confirm the program now prints `64000`.
 
 * Integer overflow
 
@@ -766,7 +714,6 @@ When you convert a variable with a _larger_ number of bits to a variable with a 
 
 - Follow [[https://play.golang.org/p/NbNwRjbmRu][this link]] and press the *Run* button. Does it print the answer you expected?
 - Fix the program by reducing the value of `x`. Hint: the value needs to be less than 33,000.
-- Press the *Run* button and confirm the program now prints `y` correctly.
 
 * Short declaration syntax
 
